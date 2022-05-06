@@ -32,7 +32,7 @@ public class RecyclerAdapter  extends RecyclerView.Adapter<RecyclerAdapter.Mount
 
     @Override
     public int getItemCount() {
-        return 0;
+        return mountains.size();
     }
 
     // VIEW HOLDER
