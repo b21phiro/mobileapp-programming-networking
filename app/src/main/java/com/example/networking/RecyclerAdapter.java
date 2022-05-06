@@ -1,5 +1,6 @@
 package com.example.networking;
 
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,6 +30,15 @@ public class RecyclerAdapter  extends RecyclerView.Adapter<RecyclerAdapter.Mount
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerAdapter.MountainViewHolder holder, int position) {
+        String name = mountains.get(position).getName();
+        String location = mountains.get(position).getLocation();
+        Integer size = mountains.get(position).getSize();
+        Uri imageURL = mountains.get(position).getAuxdata().getImageUri();
+
+        holder.name.setText(name);
+        holder.location.setText((location));
+        holder.size.setText(size.toString());
+        holder.image.setImageURI(imageURL);
 
     }
 
