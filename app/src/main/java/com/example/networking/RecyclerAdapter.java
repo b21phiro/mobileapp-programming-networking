@@ -1,5 +1,6 @@
 package com.example.networking;
 
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -22,7 +23,8 @@ public class RecyclerAdapter  extends RecyclerView.Adapter<RecyclerAdapter.Mount
     @NonNull
     @Override
     public RecyclerAdapter.MountainViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.mountain_item, parent, false);
+        return new MountainViewHolder(itemView);
     }
 
     @Override
