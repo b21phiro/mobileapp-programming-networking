@@ -51,7 +51,7 @@ public class RecyclerAdapter  extends RecyclerView.Adapter<RecyclerAdapter.Mount
         private TextView name, location, size;
         private ImageView image;
 
-        public MountainViewHolder(@NonNull View itemView) {
+        public MountainViewHolder(final View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.mountainName);
             location = itemView.findViewById(R.id.mountainLocation);
