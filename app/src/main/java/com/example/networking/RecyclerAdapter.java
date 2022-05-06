@@ -37,7 +37,6 @@ public class RecyclerAdapter  extends RecyclerView.Adapter<RecyclerAdapter.Mount
         holder.name.setText(name);
         holder.location.setText((location));
         holder.size.setText(size.toString());
-        holder.image.setImageURI(imageURL);
     }
 
     @Override
@@ -49,14 +48,12 @@ public class RecyclerAdapter  extends RecyclerView.Adapter<RecyclerAdapter.Mount
     public class MountainViewHolder extends RecyclerView.ViewHolder {
 
         private TextView name, location, size;
-        private ImageView image;
 
         public MountainViewHolder(final View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.mountainName);
             location = itemView.findViewById(R.id.mountainLocation);
             size = itemView.findViewById(R.id.mountainSize);
-            image = itemView.findViewById(R.id.mountainImage);
         }
 
     }
