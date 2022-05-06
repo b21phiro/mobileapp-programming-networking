@@ -1,11 +1,14 @@
 package com.example.networking;
 
-public class Auxdata {
-    private String wiki, image;
+import android.net.Uri;
 
-    public Auxdata(String wiki, String image) {
+public class Auxdata {
+    private String wiki;
+    private Uri imageUri;
+
+    public Auxdata(String wiki, Uri imageUri) {
         this.wiki = wiki;
-        this.image = image;
+        this.imageUri = imageUri;
     }
 
     public String getWiki() {
@@ -16,11 +19,11 @@ public class Auxdata {
         this.wiki = wiki;
     }
 
-    public String getImage() {
-        return image;
+    public Uri getImageUri() {
+        return imageUri;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setImageUri(Uri imageUri) {
+        this.imageUri = imageUri;
     }
 }
