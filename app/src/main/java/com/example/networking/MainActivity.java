@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         Gson gson = new Gson();
         Type type = new TypeToken<ArrayList<Mountain>>(){}.getType();
         mountains = gson.fromJson(json, type);
+
         RecyclerAdapter recyclerAdapter = new RecyclerAdapter(mountains);
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
